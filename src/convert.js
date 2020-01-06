@@ -2,15 +2,40 @@
 const ffmpeg = require('./ffmpeg');
 
 const convert = {
-  secondsToTimecode(seconds)
+  secondsToTimecode(seconds, fps)
   {
     const hours = Math.floor(seconds / 3600);
+    const hoursStr = (hours + '').padStart(2, '0');
+
     seconds -= hours * 3600;
 
     const minutes = Math.floor(seconds / 60);
-    seconds -= minutes * 60;
+    const minutesStr = (minutes + '').padStart(2, '0');
 
-    return `${(hours + '').padStart(2, '0')}:${(minutes + '').padStart(2, '0')}:${(Math.floor(seconds) + '').padStart(2, '0')}`;
+    seconds -= minutes * 60;
+    const secondsStr = (seconds + '').padStart(2, '0');
+
+    let result = `${hoursStr}:${minutesStr}:${secondsStr}`;
+
+    if (fps == null)
+    {
+      result += '.00';
+    }
+    else
+    {
+      const frames = seconds * fps;
+      const framesStr = (Math.floor(frames % fps) + '').padStart(2, '0');
+
+      result += '.' + framesStr;
+    }
+
+    return result;
+  },
+  framesToTimecode(frames, fps)
+  {
+    const seconds = frames / fps;
+
+    return convert.secondsToTimecode(seconds, fps);
   },
   timecodeToSeconds(timecode)
   {
