@@ -15,17 +15,17 @@ export class Helpers
         stderr: ''
       };
 
-      proc.stdout.on('data', data => 
+      proc.stdout.on('data', (data: any) => 
       {
         result.stdout += data.toString();
       });
 
-      proc.stderr.on('data', data => 
+      proc.stderr.on('data', (data: any) => 
       {
         result.stderr += data.toString();
       });
 
-      proc.on('close', exitCode => 
+      proc.on('close', (exitCode: any) => 
       {
         resolve(result);
       });
