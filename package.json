@@ -5,11 +5,25 @@
     "email": "c.kernstock@me.com",
     "url": "https://ckrnstck.dev"
   },
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ckrnstck/qut.git"
   },
-  "version": "0.0.1",
-  "main": "index.js",
-  "license": "MIT"
+  "main": "dist/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.9.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@ckrnstck/timecode-lib": "^0.0.3"
+  }
 }
