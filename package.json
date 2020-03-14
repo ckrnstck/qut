@@ -17,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/ckrnstck/qut.git"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
@@ -25,6 +25,6 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@ckrnstck/timecode-lib": "^0.0.3"
+    "@ckrnstck/timecode-lib": "^0.0.4"
   }
 }
