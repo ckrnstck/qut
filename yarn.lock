@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@ckrnstck/timecode-lib@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@ckrnstck/timecode-lib/-/timecode-lib-0.0.4.tgz#353147ff14733f7093be8db302bd9150244d68c8"
-  integrity sha512-hweF66we/uzRq/q+/eC6bBNDuj1NTMc3aviN417Nh7OqkDQADoHfaRqVgPZUN/2e9KoraQ65oyozLS7g5Y7/tw==
+"@ckrnstck/timecode-lib@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@ckrnstck/timecode-lib/-/timecode-lib-0.0.5.tgz#4cfe88be8793128ee1a75f99514d462e17ee3c38"
+  integrity sha512-DvmDnB5UBNSHImfsRnAaPKy5m+YLWgJJZy7wBc2KN/6EVBXl1AV2UBuPdiyMMW+IDBIrSJWFaMiqLokVfMH+yw==
 
 "@types/node@^13.9.0":
   version "13.9.0"
