@@ -54,7 +54,8 @@ export class FFMpegApi
     const output: IFFProbeResult = {
       videoStream: VideoStreamUtility.fromSeconds(duration, framerate),
       width,
-      height
+      height,
+      bitrate
     };
 
     return output;
