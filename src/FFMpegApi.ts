@@ -19,6 +19,7 @@ export class FFMpegApi
     let height = 0;
     let duration = 0;
     let framerate = 0;
+    let bitrate = 0;
 
     for (const line of lines)
     {
@@ -42,6 +43,10 @@ export class FFMpegApi
           const durationParts = lineParts[1].split('.');
 
           duration = parseInt(durationParts[0]);
+          break;
+
+        case 'bit_rate':
+          bitrate = parseInt(lineParts[1]);
           break;
       }
     }

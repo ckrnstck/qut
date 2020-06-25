@@ -4,5 +4,6 @@ export interface IFFProbeResult
 {
   width: number;
   height: number;
-  videoStream: IVideoStream
+  videoStream: IVideoStream;
+  bitrate: number;
 }
